@@ -1,0 +1,132 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    color-scheme: dark;
+  }
+  
+  body {
+    background-color: #0d0906;
+    color: #f6eedf;
+    overflow-x: hidden;
+  }
+}
+
+.font-serif-luxury {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+.font-display-luxury {
+  font-family: 'Cinzel', serif;
+}
+
+.font-sans-clean {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+
+/* Custom 3D emboss and relief effects for premium bistro buttons */
+.btn-emboss-gold {
+  background: linear-gradient(135deg, #df9b52 0%, #b86e28 50%, #8c4c12 100%);
+  box-shadow: 
+    0 1px 0 rgba(255, 255, 255, 0.3) inset,
+    0 -2px 0 rgba(0, 0, 0, 0.4) inset,
+    0 10px 25px -5px rgba(184, 110, 40, 0.4),
+    0 4px 6px -2px rgba(0, 0, 0, 0.3);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-emboss-gold:hover {
+  transform: translateY(-2px);
+  box-shadow: 
+    0 1px 0 rgba(255, 255, 255, 0.4) inset,
+    0 -2px 0 rgba(0, 0, 0, 0.5) inset,
+    0 14px 30px -4px rgba(184, 110, 40, 0.5),
+    0 6px 10px -2px rgba(0, 0, 0, 0.4);
+}
+
+.btn-emboss-gold:active {
+  transform: translateY(1px);
+  box-shadow: 
+    0 2px 4px rgba(0, 0, 0, 0.5) inset,
+    0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.btn-emboss-whatsapp {
+  background: linear-gradient(145deg, #25D366 0%, #1da851 55%, #128C7E 100%);
+  box-shadow: 
+    0 1px 0 rgba(255, 255, 255, 0.4) inset,
+    0 -2px 0 rgba(0, 0, 0, 0.35) inset,
+    0 12px 28px -4px rgba(37, 211, 102, 0.45),
+    0 6px 12px -2px rgba(0, 0, 0, 0.4);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-emboss-whatsapp:hover {
+  transform: scale(1.05) translateY(-2px);
+  box-shadow: 
+    0 1px 0 rgba(255, 255, 255, 0.5) inset,
+    0 -2px 0 rgba(0, 0, 0, 0.4) inset,
+    0 18px 36px -4px rgba(37, 211, 102, 0.55),
+    0 8px 16px -2px rgba(0, 0, 0, 0.5);
+}
+
+.btn-emboss-whatsapp:active {
+  transform: scale(0.98);
+}
+
+/* Subtle gentle pulse for WhatsApp floating button */
+@keyframes subtle-pulse-glow {
+  0%, 100% {
+    box-shadow: 
+      0 1px 0 rgba(255, 255, 255, 0.4) inset,
+      0 -2px 0 rgba(0, 0, 0, 0.35) inset,
+      0 0 0 0 rgba(37, 211, 102, 0.5),
+      0 12px 28px -4px rgba(37, 211, 102, 0.4);
+  }
+  50% {
+    box-shadow: 
+      0 1px 0 rgba(255, 255, 255, 0.4) inset,
+      0 -2px 0 rgba(0, 0, 0, 0.35) inset,
+      0 0 0 12px rgba(37, 211, 102, 0),
+      0 16px 32px -2px rgba(37, 211, 102, 0.5);
+  }
+}
+
+.animate-subtle-pulse {
+  animation: subtle-pulse-glow 2.8s infinite ease-in-out;
+}
+
+/* Hide scrollbar for clean carousels */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* 3D embossed and subtle breathing glow pulse for TCONDE credit */
+@keyframes tconde-pulse {
+  0%, 100% {
+    filter: drop-shadow(0 1px 1px rgba(0,0,0,0.9)) drop-shadow(0 2px 4px rgba(0,0,0,0.8)) drop-shadow(0 0 4px rgba(229, 155, 76, 0.2));
+    opacity: 0.88;
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    filter: drop-shadow(0 1px 1px rgba(0,0,0,0.9)) drop-shadow(0 3px 6px rgba(0,0,0,0.85)) drop-shadow(0 0 10px rgba(245, 180, 110, 0.45));
+    opacity: 1;
+    transform: translateY(-0.5px) scale(1.015);
+  }
+}
+
+.tconde-credit-3d {
+  background: linear-gradient(180deg, #fef5ea 0%, #e59b4c 55%, #a85e1b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: tconde-pulse 4.2s ease-in-out infinite;
+  display: inline-block;
+  user-select: none;
+  pointer-events: none;
+}

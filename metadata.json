@@ -1,0 +1,6 @@
+{
+  "name": "Fulô de Mandacaru Bistrô",
+  "description": "BioSite Premium do Fulô de Mandacaru Bistrô em Presidente Prudente - SP. O gostinho do Nordeste, pertinho de você!",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
