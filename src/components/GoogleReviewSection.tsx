@@ -29,15 +29,15 @@ export const GoogleReviewSection: React.FC = () => {
 
       <div className="relative max-w-xl mx-auto text-center">
         
-        {/* LOGO OFICIAL DO GOOGLE MAPS EM DESTAQUE SUPERIOR (Aumentada visível e elegantemente) */}
+        {/* LOGO OFICIAL DO GOOGLE MAPS EM DESTAQUE (+20% em formato natural sem enquadramento quadrado artificial) */}
         <div className="inline-flex flex-col items-center mb-5">
-          <div className="relative group p-3.5 sm:p-4 rounded-3xl bg-gradient-to-b from-[#1f1510] to-[#120a06] border border-[#b86e28]/35 shadow-[0_10px_28px_rgba(0,0,0,0.6)] backdrop-blur-md transition-transform duration-300 hover:scale-105">
-            {/* Halo sutil com cores do Google */}
-            <div className="absolute -inset-1.5 rounded-3xl bg-gradient-to-tr from-[#4285F4]/30 via-[#EA4335]/30 to-[#34A853]/30 opacity-45 blur-md -z-10" />
+          <div className="relative group transition-transform duration-300 hover:scale-105">
+            {/* Halo sutil de luz suave com cores do Google */}
+            <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-[#4285F4]/30 via-[#EA4335]/30 to-[#34A853]/30 opacity-60 blur-xl -z-10" />
             <img
               src={OFFICIAL_IMAGES.googleMapsLogo}
               alt="Logo Oficial do Google Maps"
-              className="w-16 h-16 sm:w-20 sm:h-20 object-contain drop-shadow-lg"
+              className="w-20 sm:w-24 h-auto object-contain drop-shadow-[0_8px_20px_rgba(0,0,0,0.65)] rounded-2xl"
               loading="lazy"
             />
           </div>
