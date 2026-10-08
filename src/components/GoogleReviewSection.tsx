@@ -1,69 +1,108 @@
 import React from 'react';
-import { Star, MapPin, ExternalLink, MessageSquareHeart } from 'lucide-react';
+import { Star, ExternalLink } from 'lucide-react';
+import { OFFICIAL_IMAGES, OFFICIAL_LINKS } from '../data/constants.ts';
 
 export const GoogleReviewSection: React.FC = () => {
   return (
-    <section className="relative w-full py-12 px-4 sm:px-6 bg-gradient-to-b from-[#100a06] via-[#140c08] to-[#0d0805] border-t border-[#b86e28]/25 overflow-hidden">
-      {/* Background ambient lighting */}
+    <section className="relative w-full py-14 px-4 sm:px-6 bg-gradient-to-b from-[#110b07] via-[#140c09] to-[#0f0906] border-y border-[#b86e28]/25 overflow-hidden">
+      
+      {/* Luz ambiente refinada inspirada sutilmente nas cores do Google */}
       <div 
-        className="pointer-events-none absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 w-80 h-80 rounded-full opacity-10 blur-[100px]"
-        style={{ background: '#e59b4c' }}
+        className="pointer-events-none absolute -left-20 top-1/4 w-72 h-72 rounded-full opacity-[0.08] blur-[95px]"
+        style={{ background: '#4285F4' }}
       />
+      <div 
+        className="pointer-events-none absolute -right-20 top-1/3 w-72 h-72 rounded-full opacity-[0.08] blur-[95px]"
+        style={{ background: '#EA4335' }}
+      />
+      <div 
+        className="pointer-events-none absolute left-1/3 bottom-0 w-64 h-64 rounded-full opacity-[0.07] blur-[90px]"
+        style={{ background: '#FBBC05' }}
+      />
+      <div 
+        className="pointer-events-none absolute right-1/4 bottom-0 w-64 h-64 rounded-full opacity-[0.07] blur-[90px]"
+        style={{ background: '#34A853' }}
+      />
+
+      {/* Linha decorativa sutil com as 4 cores do Google no topo da seção */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-48 sm:w-72 h-[2px] bg-gradient-to-r from-transparent via-[#4285F4] via-[#EA4335] via-[#FBBC05] via-[#34A853] to-transparent opacity-60" />
 
       <div className="relative max-w-xl mx-auto text-center">
         
-        {/* Badge Elegante */}
-        <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#20140c] border border-[#b86e28]/35 mb-3 shadow-sm">
-          <MessageSquareHeart className="w-3.5 h-3.5 text-[#e59b4c]" />
-          <span className="text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.25em] text-[#e8b57b]">
-            Opinião dos Clientes
-          </span>
+        {/* LOGO OFICIAL DO GOOGLE MAPS EM DESTAQUE SUPERIOR (Aumentada visível e elegantemente) */}
+        <div className="inline-flex flex-col items-center mb-5">
+          <div className="relative group p-3.5 sm:p-4 rounded-3xl bg-gradient-to-b from-[#1f1510] to-[#120a06] border border-[#b86e28]/35 shadow-[0_10px_28px_rgba(0,0,0,0.6)] backdrop-blur-md transition-transform duration-300 hover:scale-105">
+            {/* Halo sutil com cores do Google */}
+            <div className="absolute -inset-1.5 rounded-3xl bg-gradient-to-tr from-[#4285F4]/30 via-[#EA4335]/30 to-[#34A853]/30 opacity-45 blur-md -z-10" />
+            <img
+              src={OFFICIAL_IMAGES.googleMapsLogo}
+              alt="Logo Oficial do Google Maps"
+              className="w-16 h-16 sm:w-20 sm:h-20 object-contain drop-shadow-lg"
+              loading="lazy"
+            />
+          </div>
+
+          {/* Micro-badge com as 4 cores do Google */}
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 mt-3 rounded-full bg-[#1c120b] border border-[#b86e28]/30 shadow-sm">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#4285F4]" />
+            <span className="w-1.5 h-1.5 rounded-full bg-[#EA4335]" />
+            <span className="w-1.5 h-1.5 rounded-full bg-[#FBBC05]" />
+            <span className="w-1.5 h-1.5 rounded-full bg-[#34A853]" />
+            <span className="text-[10px] font-bold uppercase tracking-[0.22em] text-[#e8b57b] ml-1">
+              Google Maps
+            </span>
+          </div>
         </div>
 
-        {/* Título Principal */}
-        <h2 className="font-display-luxury text-xl sm:text-2xl font-extrabold tracking-wide text-[#fdf6ee] uppercase mb-2">
-          AVALIE SUA EXPERIÊNCIA NO FULÔ
+        {/* Título Principal Convidativo */}
+        <h2 className="font-display-luxury text-xl sm:text-2xl md:text-[26px] font-extrabold tracking-wide text-[#fdf6ee] uppercase mb-2">
+          Gostou da experiência no Fulô de Mandacaru?
         </h2>
 
-        {/* Subtítulo */}
-        <p className="text-xs sm:text-sm text-[#e59b4c] font-serif-luxury italic font-medium mb-3">
-          Sua experiência é muito importante para nós.
+        {/* Mensagem Afetiva */}
+        <p className="text-sm sm:text-base text-[#e59b4c] font-serif-luxury italic font-medium mb-5">
+          Sua experiência é muito importante para nós ❤️
         </p>
 
         {/* Card Editorial de Avaliação */}
-        <div className="p-5 sm:p-6 rounded-2xl bg-gradient-to-b from-[#1f130b]/95 via-[#160d07]/95 to-[#100905]/95 border border-[#b86e28]/35 shadow-[0_10px_30px_rgba(0,0,0,0.65)] backdrop-blur-sm">
+        <div className="relative p-6 sm:p-7 rounded-3xl bg-gradient-to-b from-[#1e130c]/95 via-[#160d08]/95 to-[#100905]/95 border border-[#b86e28]/35 shadow-[0_12px_32px_rgba(0,0,0,0.65)] backdrop-blur-md">
           
-          {/* Texto Complementar */}
-          <p className="text-xs sm:text-[13px] text-[#e8d2bd] font-sans-clean font-light leading-relaxed mb-4 max-w-md mx-auto">
-            Se você gostou da experiência no Fulô de Mandacaru, deixe sua avaliação no Google Maps e compartilhe sua experiência com outras pessoas.
+          {/* Detalhe de borda com as cores do Google no topo do card */}
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-36 h-[2px] bg-gradient-to-r from-[#4285F4] via-[#EA4335] via-[#FBBC05] to-[#34A853] rounded-full" />
+
+          {/* Texto de convite */}
+          <p className="text-sm sm:text-[15px] text-[#ebd8c5] font-sans-clean font-light leading-relaxed mb-5 max-w-md mx-auto">
+            Conte para outras pessoas como foi sua experiência e deixe sua avaliação no Google Maps.
           </p>
 
-          {/* Destaque Visual das 5 Estrelas */}
+          {/* Destaque Visual das 5 Estrelas Douradas */}
           <div className="flex items-center justify-center gap-1.5 mb-2">
             {[...Array(5)].map((_, i) => (
               <Star 
                 key={i} 
-                className="w-5 h-5 sm:w-6 sm:h-6 text-[#fbbf24] fill-[#fbbf24] drop-shadow-[0_2px_8px_rgba(251,191,36,0.4)] transition-transform duration-300 hover:scale-110" 
+                className="w-6 h-6 sm:w-7 sm:h-7 text-[#fbbf24] fill-[#fbbf24] drop-shadow-[0_2px_10px_rgba(251,191,36,0.55)] transition-transform duration-300 hover:scale-125 cursor-default" 
               />
             ))}
           </div>
 
-          {/* Texto de incentivo */}
-          <p className="text-[11px] sm:text-xs font-bold text-[#faeedc] tracking-wider uppercase mb-5">
-            AVALIE O FULÔ DE MANDACARU COM 5 ESTRELAS
+          <p className="text-[11px] sm:text-xs font-semibold text-[#f8e5d0] tracking-wider uppercase mb-6">
+            Avalie o Fulô de Mandacaru com 5 Estrelas
           </p>
 
-          {/* Botão / CTA */}
+          {/* BOTÃO DE DESTAQUE PREMIUM COM AS CORES DO GOOGLE */}
           <div className="flex justify-center">
             <a
-              href="https://maps.app.goo.gl/V5wLCjRnkysGxmor7?g_st=ic"
+              href={OFFICIAL_LINKS.googleMaps}
               target="_blank"
               rel="noopener noreferrer"
-              className="group inline-flex items-center justify-center gap-2.5 px-6 sm:px-8 py-3.5 rounded-xl bg-gradient-to-r from-[#b86e28] via-[#d9822b] to-[#b86e28] text-[#120803] font-bold text-xs sm:text-sm tracking-wider uppercase shadow-[0_6px_20px_rgba(184,110,40,0.4)] hover:shadow-[0_8px_25px_rgba(229,155,76,0.6)] hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"
+              className="group relative inline-flex items-center justify-center gap-2.5 px-7 sm:px-9 py-3.5 sm:py-4 rounded-xl bg-gradient-to-r from-[#1b120c] via-[#241710] to-[#1b120c] border border-[#4285F4]/60 text-[#ffffff] font-bold text-xs sm:text-sm tracking-wider uppercase shadow-[0_8px_25px_rgba(0,0,0,0.7)] hover:border-[#EA4335] hover:shadow-[0_10px_30px_rgba(66,133,244,0.3)] hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"
             >
-              <MapPin className="w-4 h-4 text-[#120803] shrink-0" />
-              <span>AVALIAR NO GOOGLE MAPS</span>
-              <ExternalLink className="w-3.5 h-3.5 text-[#120803]/80 group-hover:translate-x-0.5 transition-transform" />
+              {/* Barra sutil colorida na base do botão */}
+              <span className="absolute bottom-0 left-4 right-4 h-[2px] bg-gradient-to-r from-[#4285F4] via-[#EA4335] via-[#FBBC05] to-[#34A853] rounded-full opacity-80 group-hover:opacity-100 transition-opacity" />
+
+              <span className="text-base text-[#fbbf24] drop-shadow-sm">⭐</span>
+              <span className="font-bold tracking-wide">AVALIAR NO GOOGLE MAPS</span>
+              <ExternalLink className="w-4 h-4 text-[#ffffff]/80 group-hover:translate-x-0.5 group-hover:text-white transition-all" />
             </a>
           </div>
 

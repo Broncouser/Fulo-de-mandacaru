@@ -21,6 +21,7 @@ export const OFFICIAL_IMAGES = {
   tripAdvisorLogo: "https://i.postimg.cc/0jn0DRPq/logo-trip-advisor.png",
   petFriendlyPhoto: "https://i.postimg.cc/5ymqMcRr/photo-2026-09-24-15-36-44.jpg",
   gastronomiaPhoto: "https://i.postimg.cc/MTmdzjcM/photo-2026-09-24-15-25-54.jpg",
+  googleMapsLogo: "https://i.postimg.cc/N0XGZNy9/IMG-9377.png",
 };
 
 export const OFFICIAL_LINKS = {

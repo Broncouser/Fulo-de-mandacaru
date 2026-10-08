@@ -30,8 +30,8 @@ export const HeaderHero: React.FC = () => {
           />
         </div>
 
-        {/* LADO DIREITO: ÍCONES DAS MÍDIAS SOCIAIS OFICIAIS */}
-        <div className="flex items-center gap-2 sm:gap-3 shrink-0">
+        {/* LADO DIREITO: ÍCONES DAS MÍDIAS SOCIAIS OFICIAIS (Aumentada em aproximadamente 10%) */}
+        <div className="flex items-center gap-2 sm:gap-3 shrink-0 scale-110 origin-right mr-1">
           {/* WhatsApp */}
           <a
             href={OFFICIAL_LINKS.whatsapp}
@@ -56,16 +56,16 @@ export const HeaderHero: React.FC = () => {
             <InstagramIcon className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
           </a>
 
-          {/* Google Maps */}
+          {/* Google Maps (Levemente aumentado em 15% para perfeito equilíbrio visual) */}
           <a
             href={OFFICIAL_LINKS.googleMaps}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-[#1b1009] border border-[#EA4335]/30 flex items-center justify-center text-[#EA4335] hover:scale-110 hover:border-[#EA4335] transition-all shadow-sm"
+            className="w-8 h-8 sm:w-9 sm:h-9 rounded-lg bg-[#1b1009] border border-[#EA4335]/35 flex items-center justify-center text-[#EA4335] hover:scale-110 hover:border-[#EA4335] transition-all shadow-sm"
             title="Google Maps"
             aria-label="Google Maps"
           >
-            <GoogleMapsIcon className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+            <GoogleMapsIcon className="w-[17px] h-[17px] sm:w-[19px] sm:h-[19px]" />
           </a>
 
           {/* TripAdvisor (com a imagem oficial do logo) */}
@@ -141,13 +141,13 @@ export const HeaderHero: React.FC = () => {
             {BRAND.name}
           </h1>
 
-          {/* Frase Principal da Marca */}
+          {/* Frase Principal da Marca (MANTIDA 100% EXATAMENTE COMO ESTÁ) */}
           <p className="font-serif-luxury italic text-base sm:text-lg text-[#e8b57b] font-medium tracking-normal mb-6 max-w-md drop-shadow">
             “{BRAND.tagline}”
           </p>
 
-          {/* CAIXA ORIGINAL PRESERVADA — COM OS 5 BOTÕES DE MÍDIAS SOCIAIS */}
-          <div className="btn-emboss-gold w-auto px-5 py-2.5 sm:px-6 sm:py-3 rounded-xl flex items-center justify-center gap-2.5 sm:gap-3.5 shadow-2xl">
+          {/* BARRA DE MÍDIAS SOCIAIS ABAIXO DA FRASE (Aumentada proporcionalmente em aproximadamente 10%) */}
+          <div className="btn-emboss-gold w-auto px-5.5 py-3 sm:px-6.5 sm:py-3.5 rounded-xl flex items-center justify-center gap-3 sm:gap-4 shadow-2xl scale-110 my-1.5">
             {/* WhatsApp */}
             <a
               href={OFFICIAL_LINKS.whatsapp}
@@ -172,16 +172,16 @@ export const HeaderHero: React.FC = () => {
               <InstagramIcon className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
             </a>
 
-            {/* Google Maps */}
+            {/* Google Maps (Levemente aumentado em 15% para perfeito equilíbrio visual) */}
             <a
               href={OFFICIAL_LINKS.googleMaps}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-[#1b1009] border border-[#EA4335]/30 flex items-center justify-center text-[#EA4335] hover:scale-110 hover:border-[#EA4335] transition-all shadow-sm"
+              className="w-8 h-8 sm:w-9 sm:h-9 rounded-lg bg-[#1b1009] border border-[#EA4335]/35 flex items-center justify-center text-[#EA4335] hover:scale-110 hover:border-[#EA4335] transition-all shadow-sm"
               title="Google Maps"
               aria-label="Google Maps"
             >
-              <GoogleMapsIcon className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+              <GoogleMapsIcon className="w-[17px] h-[17px] sm:w-[19px] sm:h-[19px]" />
             </a>
 
             {/* TripAdvisor (com a imagem oficial do logo) */}

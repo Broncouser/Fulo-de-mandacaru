@@ -33,14 +33,14 @@ export default function App() {
                - Programação semanal (Terça -> Quarta -> Última Quinta) com fotos e informações ligadas */}
         <BistroExperiencesSection />
 
+        {/* SEÇÃO — AVALIE-NOS NO GOOGLE MAPS (Posicionada imediatamente antes de Editorial Gastronômico — Nossa História) */}
+        <GoogleReviewSection />
+
         {/* 3. Seção: EDITORIAL GASTRONÔMICO
                - NOSSA HISTÓRIA (desde 2013)
                - CHEF SIMONE LEBEDENCO & CHEF LUCAS ALESSI (foto oficial definitiva)
                - RECONHECIMENTO OFICIAL TRIPADVISOR (4,7 estrelas, Certificado de Excelência, logo oficial) */}
         <EditorialGastronomicoSection />
-
-        {/* NOVA SEÇÃO: AVALIE SUA EXPERIÊNCIA NO FULÔ (GOOGLE MAPS) */}
-        <GoogleReviewSection />
 
         {/* 4. Seção: PET-FRIENDLY (Área Externa Aconchegante e Sombreada) */}
         <PetFriendlySection />
